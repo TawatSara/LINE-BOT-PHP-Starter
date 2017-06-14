@@ -6,7 +6,7 @@ if (!$fp) {
 }
 while (false !== ($char = fgetc($fp))) {
     //$fc = iconv('windows-1250', 'utf-8', $char); 
-    $fc = iconv('windows-1250', 'tis-620', $char); 
+    $fc = iconv('TIS-620', 'UTF-8', $char); 
     echo "$fc";
     //echo "$char\n";
     //$text1=$char;
