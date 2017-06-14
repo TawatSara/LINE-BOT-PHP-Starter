@@ -7,7 +7,7 @@ if (!$fp) {
 while (false !== ($char = fgetc($fp))) {
     //$fc = iconv('windows-1250', 'utf-8', $char); 
     $fc = iconv('TIS-620', 'UTF-8', $char);
-    //echo "$fc";
+    echo "$fc";
     //echo "$char\n";
     //$text1=$char;
     //ตัวอย่างต้องการแปลง utf-8 เป็น tis-620
