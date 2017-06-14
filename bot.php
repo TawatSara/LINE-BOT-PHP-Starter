@@ -1,4 +1,5 @@
 <?php
+$char='ABC';
 $fp = fopen('current.txt', 'r');
 if (!$fp) {
     //echo 'Could not open file current.txt';
@@ -8,7 +9,6 @@ while (false !== ($char = fgetc($fp))) {
     $fc = iconv('tis-620', 'utf-8', $char);
 }
 fclose($fp);
-$char='ABC';
 
 $access_token = '2JuqcsF333xgqJabnVYZAtSiGpZvG6l3L3eMlFheS65EAfiTET2FA5xri/1p+oehtPc0lRBxY8c6A6iJS6vduF9XCbhIulXRta6Z35THEY73EdusC1biLCvav/KfKfTLy4eeQcEHmKC304xUe/QgxAdB04t89/1O/w1cDnyilFU=';
 
