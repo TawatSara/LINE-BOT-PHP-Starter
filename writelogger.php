@@ -13,7 +13,7 @@ if ($handle) {
 }
 //echo $text1;
 
-$fa = @fopen("current.txt", "a+");
+$fa = @fopen("logger.txt", "a+");
 if ($fa) {
     fputs($fa,$text1);
     fclose($fa);
