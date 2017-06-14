@@ -6,12 +6,12 @@ if (!$fp) {
 }
 while (false !== ($char = fgetc($fp))) {
     //$fc = iconv('windows-1250', 'utf-8', $char); 
-    $fc = iconv('windows-1250', 'TIS-620', $char);
+    $fc = iconv('TIS-620', 'UTF-8', $char);
     //echo "$fc";
     //echo "$char\n";
     //$text1=$char;
     //ตัวอย่างต้องการแปลง utf-8 เป็น tis-620
-    echo iconv( 'TIS-620', 'UTF-8', "สวัสดีครับ Mindphp.com");
+    //echo iconv( 'TIS-620', 'UTF-8', "สวัสดีครับ Mindphp.com");
 }
 fclose($fp);
 //echo ($text1);
