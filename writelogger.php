@@ -1,6 +1,5 @@
 <?
 $text1='A';
-/*
 $fp = fopen('current.txt', 'r');
 if (!$fp) {
     //echo 'Could not open file current.txt';
@@ -10,7 +9,6 @@ while (false !== ($char = fgetc($fp))) {
     $text1=$char;
 }
 fclose($fp);
-*/
 
 //$a=fopen("logger.txt","a+");//อ่านค่าทั้งหมดมาด้วย
 $a=fopen("logger.txt","w");//เขียนทับไปเลย
