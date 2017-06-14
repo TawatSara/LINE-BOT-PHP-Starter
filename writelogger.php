@@ -11,8 +11,8 @@ while (false !== ($char = fgetc($fp))) {
 fclose($fp);
 
 //$a=fopen("logger.txt","a+");//อ่านค่าทั้งหมดมาด้วย
-$a=fopen("logger.txt","w");//เขียนทับไปเลย
-fputs($a,$text1);
+//$a=fopen("logger.txt","w");//เขียนทับไปเลย
+//fputs($a,$text1);
 /*
 //$d="####".date("d M Y H:i:s")."####\r\n";
 //$d="####".date("Y-m-d H:i:s")."####\r\n";
@@ -24,7 +24,7 @@ fputs($a,"}>");
 fputs($a,"\r\n");
 */
     
-fclose($a);
+//fclose($a);
 echo ($text1);
 
 //echo ("OK");
