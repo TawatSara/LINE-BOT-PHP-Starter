@@ -5,8 +5,8 @@ $a=fopen("logger.txt","a+");
 $d="<{date: ".date("Y-m-d H:i:s")."}>"."\r\n";
 fputs($a,$d);
 
-fputs($a,"<{data: ");
-fputs($a,$dt);
+fputs($a,"<{new: ");
+fputs($a,$b);
 fputs($a,"}>");
 fputs($a,"\r\n");
 fclose($a);
