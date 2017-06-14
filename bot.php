@@ -1,16 +1,17 @@
 <?php
-//$char='ABC';
+$text1='ABC';
 $handle = @fopen("current.txt", "r");
 if ($handle) {
     while (($buffer = fgets($handle, 4096)) !== false) {
         //echo $buffer;
+        $text1 = $buffer;
     }
     if (!feof($handle)) {
-       //echo "Error: unexpected fgets() fail\n";
+        //echo "Error: unexpected fgets() fail\n";
     }
     fclose($handle);
 }
-$char = $buffer;
+//echo $text1;
 
 $access_token = '2JuqcsF333xgqJabnVYZAtSiGpZvG6l3L3eMlFheS65EAfiTET2FA5xri/1p+oehtPc0lRBxY8c6A6iJS6vduF9XCbhIulXRta6Z35THEY73EdusC1biLCvav/KfKfTLy4eeQcEHmKC304xUe/QgxAdB04t89/1O/w1cDnyilFU=';
 
@@ -26,7 +27,7 @@ if (!is_null($events['events'])) {
 		if ($event['type'] == 'message' && $event['message']['type'] == 'text') {
 			// Get text sent
 			//$stringtemp = ' By PSD 555';
-			$stringtemp = $char;
+			$stringtemp = $text1;
 			$text = $event['message']['text'];
 			$text = $text . $stringtemp;
 			// Get replyToken
