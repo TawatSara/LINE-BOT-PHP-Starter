@@ -1,4 +1,16 @@
 <?php
+$handle = @fopen("/current.txt", "r");
+if ($handle) {
+    while (($buffer = fgets($handle, 4096)) !== false) {
+        echo $buffer;
+    }
+    if (!feof($handle)) {
+        echo "Error: unexpected fgets() fail\n";
+    }
+    fclose($handle);
+}
+
+/*
 $text1='A';
 $fp = fopen('current.txt', 'r');
 if (!$fp) {
@@ -15,6 +27,7 @@ while (false !== ($char = fgetc($fp))) {
 }
 fclose($fp);
 //echo ($text1);
+*/
 
 //$a=fopen("logger.txt","a+");//อ่านค่าทั้งหมดมาด้วย
 //$a=fopen("logger.txt","w");//เขียนทับไปเลย
