@@ -1,13 +1,10 @@
-<head>
-<meta http-equiv="Content-Type" content="text/html; charset=tis-620">
-</head>
 <?php
 $text1='ABC';
 $handle = @fopen("current.txt", "r");
 if ($handle) {
     while (($buffer = fgets($handle, 4096)) !== false) {
         //echo $buffer;
-        $text1 = $buffer;
+        $text1 = iconv('TIS-620', 'UTF-8',$buffer);
     }
     if (!feof($handle)) {
         //echo "Error: unexpected fgets() fail\n";
@@ -39,5 +36,6 @@ fputs($a,"\r\n");
     
 //fclose($a);
 //echo ("OK");
+echo $text1;
 
 ?>
