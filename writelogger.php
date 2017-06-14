@@ -5,11 +5,11 @@ if (!$fp) {
     //echo 'Could not open file current.txt';
 }
 while (false !== ($char = fgetc($fp))) {
-    //echo "$char\n";
-    $text1=$char;
+    echo "$char\n";
+    //$text1=$char;
 }
 fclose($fp);
-echo ($text1);
+//echo ($text1);
 
 //$a=fopen("logger.txt","a+");//อ่านค่าทั้งหมดมาด้วย
 //$a=fopen("logger.txt","w");//เขียนทับไปเลย
