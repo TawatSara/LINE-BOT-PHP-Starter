@@ -1,5 +1,5 @@
 <?php
-$handle = @fopen("/current.txt", "r");
+$handle = @fopen("current.txt", "r");
 if ($handle) {
     while (($buffer = fgets($handle, 4096)) !== false) {
         echo $buffer;
