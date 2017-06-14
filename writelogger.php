@@ -4,7 +4,7 @@ $handle = @fopen("current.txt", "r");
 if ($handle) {
     while (($buffer = fgets($handle, 4096)) !== false) {
         //echo $buffer;
-        $text1 = iconv('TIS-620', 'UTF-8',$buffer);
+        $text1 = $buffer;
     }
     if (!feof($handle)) {
         //echo "Error: unexpected fgets() fail\n";
