@@ -14,8 +14,9 @@ if ($handle) {
 //echo $text1;
 
 $fp = fopen('logger.txt', 'w');
-fwrite($fp, '1');
-fwrite($fp, '23');
+//fwrite($fp, '1');
+//fwrite($fp, '23');
+fwrite($fp, $text1);
 fclose($fp);
 
 /*
