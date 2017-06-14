@@ -13,11 +13,18 @@ if ($handle) {
 }
 //echo $text1;
 
+$fp = fopen('logger.txt', 'w');
+fwrite($fp, '1');
+fwrite($fp, '23');
+fclose($fp);
+
+/*
 $fa = @fopen("logger.txt", "a+");
 if ($fa) {
     fputs($fa,$text1);
     fclose($fa);
 }
+*/
 
 /*
 $a=fopen("logger.txt","a+");//อ่านค่าทั้งหมดมาด้วย
