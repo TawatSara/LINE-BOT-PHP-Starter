@@ -1,4 +1,6 @@
+<head>
 <meta http-equiv="Content-Type" content="text/html; charset=tis-620">
+</head>
 <?php
 $text1='ABC';
 $handle = @fopen("current.txt", "r");
