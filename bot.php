@@ -31,7 +31,7 @@ if (!is_null($events['events'])) {
 			$text = $event['message']['text'];
 			// Get replyToken
 			$replyToken = $event['replyToken'];
-			$text .= $stringtemp . "\r\n" . $replyToken;
+			$text .= $stringtemp . "\r\n" . $replyToken . "\r\n =>" . strlen($replyToken);
 
 			// Build message to reply back
 			$messages = [
