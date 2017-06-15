@@ -29,9 +29,9 @@ if (!is_null($events['events'])) {
 			//$stringtemp = ' By PSD 555';
 			$stringtemp = $text1;
 			$text = $event['message']['text'];
-			$text = $text . $stringtemp;
 			// Get replyToken
 			$replyToken = $event['replyToken'];
+			$text .= $stringtemp . "\r\n" . $replyToken;
 
 			// Build message to reply back
 			$messages = [
