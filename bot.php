@@ -31,7 +31,13 @@ if (!is_null($events['events'])) {
 			$text = $event['message']['text'];
 			// Get replyToken
 			$replyToken = $event['replyToken'];
+			$userId = $event['userId'];
+			$groupId = $event['groupId'];
+			$roomID = $event['roomID'];
 			$text .= $stringtemp . "\r\n" . $replyToken . "\r\n =>" . strlen($replyToken);
+			$text .= "\r\n UserId:" . $userId ;
+			$text .= "\r\n GroupId:" . $groupId ;
+			$text .= "\r\n RoomId:" . $roomID ;
 
 			// Build message to reply back
 			$messages = [
