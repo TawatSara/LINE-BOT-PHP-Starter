@@ -1,6 +1,8 @@
 <?php
 	function send_line_notify($message, $token)
 	{
+ 	  $message = 'ข้อความ';
+	  $token = 'WoYvQPes4ZfMAhfftMiO1W01Yon8VTAd4zvtpVcRYf9';
 	  $ch = curl_init();
 	  curl_setopt( $ch, CURLOPT_URL, "https://notify-api.line.me/api/notify");
 	  curl_setopt( $ch, CURLOPT_SSL_VERIFYHOST, 0);
@@ -15,7 +17,7 @@
 	  curl_close( $ch );
 	  return $result;
 	}
-	$message = 'ข้อความ';
-	$token = 'ใส่ token ของคุณ';
+	//$message = 'ข้อความ';
+	//$token = 'ใส่ token ของคุณ';
 	echo send_line_notify($message, $token);
 ?>
