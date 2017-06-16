@@ -1,7 +1,7 @@
 <?php
 	function send_line_notify($message, $token)
 	{
- 	  //$message = 'ข้อความ';
+ 	  $message = 'ข้อความ';
 	  $token = 'WoYvQPes4ZfMAhfftMiO1W01Yon8VTAd4zvtpVcRYf9';
 	  $ch = curl_init();
 	  curl_setopt( $ch, CURLOPT_URL, "https://notify-api.line.me/api/notify");
